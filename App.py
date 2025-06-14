@@ -1,9 +1,15 @@
 from flask import Flask, request, render_template
 import requests
+import os
+from dotenv import load_dotenv
+
+# Load environment variables from .env
+load_dotenv()
 
 app = Flask(__name__)
 
-api_key = '9904dc54d2a25f3b7a21b3bf6f349535'
+# Securely load API key
+api_key = os.getenv("OPENWEATHER_API_KEY")
 
 
 def fahrenheit_to_celsius(temp):
@@ -38,4 +44,4 @@ def home():
 
 
 if __name__ == '__main__':
-    app.run( debug=True)
+    app.run(debug=True)
