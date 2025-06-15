@@ -28,7 +28,7 @@ A simple and elegant Flask web application to display real-time weather informat
 
 ## 1️ Clone the Repository
 
-```bash
+bash
 git clone https://github.com/YOUR_USERNAME/weather-app.git
 cd weather-app
 
